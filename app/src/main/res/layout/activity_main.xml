@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.coordinatorlayout.widget.CoordinatorLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -22,119 +21,128 @@
         </view>
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
-
     <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_height="match_parent"
         android:layout_width="match_parent"
-        android:paddingBottom="@dimen/activity_vertical_margin"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/activity_vertical_margin"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
         android:orientation="vertical"
-        android:fitsSystemWindows="true">
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin">
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/textoTitulo"
-            android:layout_height="wrap_content"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
             android:text="@string/texto_registro"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:gravity="center_horizontal" />
+            android:textSize="@dimen/size_texto_titulos" />
 
-        <EditText
-            android:id="@+id/nombreCompleto"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/outlinedTextField1"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/textoTitulo"
-            android:layout_marginTop="@dimen/titulo_vertical_margin"
-            android:clickable="true"
-            android:focusable="true"
-            android:hint="@string/texto_nombre"
-            android:importantForAutofill="no"
-            android:inputType="text"
-            android:maxLines="1"
-            android:fitsSystemWindows="true"/>
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <EditText
-                android:id="@+id/fechaNacimiento"
-                android:hint="@string/texto_fecha_nacimiento"
+            android:layout_marginTop="@dimen/editText_vertical_margin"
+            android:hint="@string/texto_nombre">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/nombreCompleto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="date"
-                android:focusable="false"
                 android:clickable="true"
-                android:maxLines="1"
-                android:layout_marginTop="@dimen/editText_vertical_margin"
-                android:importantForAutofill="no"
-                android:fitsSystemWindows="true"/>
-            <ImageButton
-                android:id="@+id/ib_obtener_fecha"
-                android:layout_width="wrap_content"
+                android:focusable="true"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/outlinedTextField2"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/editText_vertical_margin"
+            android:hint="@string/texto_fecha_nacimiento">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/fechaNacimiento"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignRight="@id/fechaNacimiento"
-                android:layout_marginTop="@dimen/editText_vertical_margin"
                 android:clickable="true"
-                android:background="@android:drawable/screen_background_light_transparent"
-                android:src="@drawable/ic_action_calendar_day"
-                tools:ignore="ContentDescription"
-                android:focusable="false" />
-        </RelativeLayout>
+                android:focusable="false"
+                android:inputType="date" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <EditText
-            android:id="@+id/telefono"
-            android:hint="@string/texto_telefono"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/outlinedTextField3"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:clickable="true"
-            android:inputType="phone"
-            android:focusable="true"
-            android:layout_below="@id/fechaNacimiento"
-            android:importantForAutofill="no"
-            android:fitsSystemWindows="true"/>
+            android:layout_marginTop="@dimen/editText_vertical_margin"
+            android:hint="@string/texto_telefono">
 
-        <EditText
-            android:id="@+id/email"
-            android:hint="@string/texto_email"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/telefono"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:inputType="phone" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/outlinedTextField4"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:clickable="true"
-            android:inputType="textEmailAddress"
-            android:layout_below="@id/telefono"
-            android:focusable="true"
-            android:importantForAutofill="no" />
+            android:layout_marginTop="@dimen/editText_vertical_margin"
+            android:hint="@string/texto_email">
 
-        <EditText
-            android:id="@+id/descripcion"
-            android:hint="@string/texto_descripcion"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/outlinedTextField5"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:clickable="true"
-            android:focusable="true"
-            android:inputType="textMultiLine"
-            android:layout_below="@id/email"
-            android:importantForAutofill="no"
-            android:maxLines="4"
-            android:fitsSystemWindows="true"/>
+            android:layout_marginTop="@dimen/editText_vertical_margin"
+            android:hint="@string/texto_descripcion">
 
-        <TextView
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/descripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:inputType="textMultiLine"
+                android:maxLines="4" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/nota"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/descripcion"
             android:layout_marginTop="@dimen/editText_vertical_margin"
-            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
             android:text="@string/texto_nota"
-            android:textSize="14sp" />
-        <Button
+            android:textSize="@dimen/size_texto_nota" />
+
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnSiguiente"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/editText_vertical_margin"
             android:text="@string/texto_btn"
-            android:theme="@style/MiBotonRaised" />
+            android:theme="@style/MiBotonRaised"
+            app:cornerRadius="@dimen/radius_button" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 

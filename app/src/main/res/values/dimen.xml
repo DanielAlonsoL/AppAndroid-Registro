@@ -5,4 +5,10 @@
 
     <dimen name="editText_vertical_margin">8dp</dimen>
     <dimen name="titulo_vertical_margin">16dp</dimen>
+
+    <dimen name="radius_button">10dp</dimen>
+
+    <dimen name="size_texto_titulos">24sp</dimen>
+    <dimen name="size_texto_mostrar">18sp</dimen>
+    <dimen name="size_texto_nota">14sp</dimen>
 </resources>

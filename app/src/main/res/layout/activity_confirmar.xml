@@ -1,117 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.coordinatorlayout.widget.CoordinatorLayout  xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    >
+    android:paddingTop="@dimen/activity_vertical_margin">
 
-<TextView
-    android:id="@+id/textoTitulo"
-    android:layout_height="wrap_content"
-    android:layout_width="match_parent"
-    android:text="@string/texto_registro"
-    android:textSize="24sp"
-    android:textStyle="bold"
-    android:gravity="center_horizontal" />
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:orientation="vertical"
+        android:fitsSystemWindows="true">
 
-<EditText
-android:id="@+id/nombreCompleto"
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:layout_below="@id/textoTitulo"
-android:layout_marginTop="@dimen/titulo_vertical_margin"
-android:clickable="true"
-android:focusable="true"
-android:hint="@string/texto_nombre"
-android:importantForAutofill="no"
-android:inputType="text"
-android:maxLines="1"
-android:fitsSystemWindows="true"/>
-<RelativeLayout
-android:layout_width="match_parent"
-android:layout_height="wrap_content">
-<EditText
-    android:id="@+id/fechaNacimiento"
-    android:hint="@string/texto_fecha_nacimiento"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:inputType="date"
-    android:focusable="false"
-    android:clickable="true"
-    android:maxLines="1"
-    android:layout_marginTop="@dimen/editText_vertical_margin"
-    android:importantForAutofill="no"
-    android:fitsSystemWindows="true"/>
-<ImageButton
-    android:id="@+id/ib_obtener_fecha"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_alignRight="@id/fechaNacimiento"
-    android:layout_marginTop="@dimen/editText_vertical_margin"
-    android:clickable="true"
-    android:background="@android:drawable/screen_background_light_transparent"
-    android:src="@drawable/ic_action_calendar_day"
-    tools:ignore="ContentDescription"
-    android:focusable="false" />
-</RelativeLayout>
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textoConfirma"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="@string/texto_confirmar"
+            android:textSize="@dimen/size_texto_titulos"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/editText_vertical_margin" />
 
-<EditText
-android:id="@+id/telefono"
-android:hint="@string/texto_telefono"
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:clickable="true"
-android:inputType="phone"
-android:focusable="true"
-android:layout_below="@id/fechaNacimiento"
-android:importantForAutofill="no"
-android:fitsSystemWindows="true"/>
 
-<EditText
-android:id="@+id/email"
-android:hint="@string/texto_email"
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:clickable="true"
-android:inputType="textEmailAddress"
-android:layout_below="@id/telefono"
-android:focusable="true"
-android:importantForAutofill="no" />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/muestraNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/size_texto_mostrar"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/editText_vertical_margin" />
 
-<EditText
-android:id="@+id/descripcion"
-android:hint="@string/texto_descripcion"
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:clickable="true"
-android:focusable="true"
-android:inputType="textMultiLine"
-android:layout_below="@id/email"
-android:importantForAutofill="no"
-android:maxLines="4"
-android:fitsSystemWindows="true"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-<TextView
-android:id="@+id/nota"
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:layout_below="@id/descripcion"
-android:layout_marginTop="@dimen/editText_vertical_margin"
-android:layout_centerHorizontal="true"
-android:text="@string/texto_nota"
-android:textSize="14sp" />
-<Button
-android:id="@+id/btnSiguiente"
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:layout_alignParentBottom="true"
-android:text="@string/texto_btn"
-android:theme="@style/MiBotonRaised" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/confirmaFechaNacimiento"
+                android:text="@string/confirmar_fecha_nacimiento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/size_texto_mostrar"
+                android:layout_centerVertical="true" />
 
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/muestraFechaNacimiento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/size_texto_mostrar"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/confirmaFechaNacimiento" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/confirmaTelefono"
+                android:text="@string/confirmar_telefono"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/size_texto_mostrar"
+                android:layout_centerVertical="true" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/muestraTelefono"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/size_texto_mostrar"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/confirmaTelefono" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/confirmaEmail"
+                android:text="@string/confirmar_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/size_texto_mostrar"
+                android:layout_centerVertical="true" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/muestraEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/size_texto_mostrar"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/confirmaEmail" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/confirmaDescripcion"
+                android:text="@string/confirmar_descripcion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/size_texto_mostrar"
+                android:textAlignment="gravity"
+                android:gravity="top" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/muestraDescripcion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/size_texto_mostrar"
+                android:textAlignment="inherit"
+                android:layout_toRightOf="@id/confirmaDescripcion"
+                android:gravity="center_vertical" />
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

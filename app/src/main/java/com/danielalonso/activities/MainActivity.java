@@ -1,41 +1,34 @@
 package com.danielalonso.activities;
 
-import android.app.ActionBar;
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Adapter;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.DatePicker;
-import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
-import com.google.android.material.datepicker.DateSelector;
+import com.google.android.material.button.MaterialButton;
+import com.google.android.material.textfield.TextInputEditText;
 
-import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.List;
 
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText nombreCompleto;
-    EditText fechaNacimiento;
-    EditText telefono;
-    EditText email;
-    EditText descripcion;
+    private TextInputEditText nombreCompleto;
+    private TextInputEditText fechaNacimiento;
+    private TextInputEditText telefono;
+    private TextInputEditText email;
+    private TextInputEditText descripcion;
 
-    Button siguiente;
-
-    ImageButton obtenerFecha;
-    ListView miLista;
-    SwipeRefreshLayout limpiando;
+    private MaterialButton siguiente;
+    private ListView miLista;
+    private SwipeRefreshLayout limpiando;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,35 +37,45 @@ public class MainActivity extends AppCompatActivity {
 
         desplegarPicker();
         limpiarContenido();
-        //presionarBoton();
-    }
-/*
-    public void presionarBoton(){
-        siguiente = (Button) findViewById(R.id.btnSiguiente);
+
+        siguiente = (MaterialButton) findViewById(R.id.btnSiguiente);
         siguiente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                guardarDatos();
+
+                nombreCompleto = (TextInputEditText) findViewById(R.id.nombreCompleto);
+                fechaNacimiento = (TextInputEditText) findViewById(R.id.fechaNacimiento);
+                telefono = (TextInputEditText) findViewById(R.id.telefono);
+                email = (TextInputEditText) findViewById(R.id.email);
+                descripcion = (TextInputEditText) findViewById(R.id.descripcion);
+
+                String catchNombre = (nombreCompleto.getText().toString());
+                String catchTelefono = (telefono.getText().toString());
+                String catchFecha = (fechaNacimiento.getText().toString());
+                String catchEmail = (email.getText().toString());
+                String catchDescripcion = (descripcion.getText().toString());
+
+                if (catchNombre != null && catchTelefono != null && catchFecha != null && catchEmail != null && catchDescripcion != null) {
+                    Intent intent = new Intent(MainActivity.this, Confirmar.class);
+
+                    intent.putExtra(getString(R.string.p_nombre), catchNombre);
+                    intent.putExtra(getString(R.string.p_fecha), catchFecha);
+                    intent.putExtra(getString(R.string.p_telefono), catchTelefono);
+                    intent.putExtra(getString(R.string.p_email), catchEmail);
+                    intent.putExtra(getString(R.string.p_descripcion), catchDescripcion);
+
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(MainActivity.this, getResources().getString(R.string.texto_toast), Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
 
-    public void guardarDatos(){
-        Intent intent = new Intent(MainActivity.this, Confirmar.class);
 
-        intent.putExtra("nombreCompleto", nombreCompleto.getText().toString());
-        intent.putExtra("telefono",telefono.getText().toString());
-        intent.putExtra("fechaNacimiento", fechaNacimiento.getText().toString());
-        intent.putExtra("email",email.getText().toString());
-        intent.putExtra("descripcion",descripcion.getText().toString());
-
-        startActivity(intent);
-    }
-
-*/
-    public void limpiarContenido(){
-        limpiando = findViewById(R.id.swipeRefresh);
-        miLista = findViewById(R.id.list);
+    public void limpiarContenido() {
+        limpiando = (SwipeRefreshLayout) findViewById(R.id.swipeRefresh);
+        miLista = (ListView) findViewById(R.id.list);
 
         limpiando.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
@@ -82,12 +85,12 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void limpiar(){
-        fechaNacimiento = findViewById(R.id.fechaNacimiento);
-        nombreCompleto = findViewById(R.id.nombreCompleto);
-        telefono = findViewById(R.id.telefono);
-        email = findViewById(R.id.email);
-        descripcion = findViewById(R.id.descripcion);
+    public void limpiar() {
+        fechaNacimiento = (TextInputEditText) findViewById(R.id.fechaNacimiento);
+        nombreCompleto = (TextInputEditText) findViewById(R.id.nombreCompleto);
+        telefono = (TextInputEditText) findViewById(R.id.telefono);
+        email = (TextInputEditText) findViewById(R.id.email);
+        descripcion = (TextInputEditText) findViewById(R.id.descripcion);
 
         miLista.setAdapter(new ArrayAdapter(this, android.R.layout.simple_list_item_1));
 
@@ -102,8 +105,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void desplegarPicker(){
 
-        fechaNacimiento = (EditText) findViewById(R.id.fechaNacimiento);
-        obtenerFecha = (ImageButton) findViewById(R.id.ib_obtener_fecha);
+        fechaNacimiento = (TextInputEditText) findViewById(R.id.fechaNacimiento);
 
         fechaNacimiento.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -121,14 +123,6 @@ public class MainActivity extends AppCompatActivity {
                 }, day, month, year);
 
                 dpd.show();
-
-                obtenerFecha.setOnClickListener(new View.OnClickListener(){
-                    @Override
-                    public void onClick(View view) {
-                     dpd.show();
-                    }
-                });
-
 
             }
         });
