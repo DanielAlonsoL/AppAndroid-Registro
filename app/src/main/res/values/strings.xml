@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Activities</string>
+    <string name="texto_registro">R E G I S T R O</string>
+    <string name="texto_btn">Siguiente</string>
+    <string name="texto_nombre"><i>Nombre completo</i></string>
+    <string name="texto_fecha_nacimiento"><i>Fecha nacimiento: dd/mm/yyyy</i></string>
+    <string name="texto_telefono"><i>Télefono</i></string>
+    <string name="texto_email"><i>Email</i></string>
+    <string name="texto_descripcion"><i>Descripción contacto</i></string>
+
+    <string name="texto_nota"><i><b>*Desliza para limpiar*</b></i></string>
+
+</resources>
