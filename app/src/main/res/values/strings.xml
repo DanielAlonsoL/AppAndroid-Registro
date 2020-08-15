@@ -2,6 +2,7 @@
     <string name="app_name">Activities</string>
     <string name="texto_registro"><b>R E G I S T R O</b></string>
     <string name="texto_btn">Siguiente</string>
+    <string name="texto_btn_back">Editar</string>
     <string name="texto_nombre"><i>Nombre completo</i></string>
     <string name="texto_fecha_nacimiento"><i>Fecha nacimiento</i></string>
     <string name="texto_telefono"><i>Télefono</i></string>

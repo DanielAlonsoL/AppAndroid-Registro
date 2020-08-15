@@ -142,6 +142,7 @@
             android:layout_marginTop="@dimen/editText_vertical_margin"
             android:text="@string/texto_btn"
             android:theme="@style/MiBotonRaised"
+            app:backgroundTint="@color/colorAccent"
             app:cornerRadius="@dimen/radius_button" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
