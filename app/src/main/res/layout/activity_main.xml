@@ -48,12 +48,47 @@
             android:hint="@string/texto_nombre">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/nombreCompleto"
+                android:id="@+id/etNombre"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clickable="true"
                 android:focusable="true"
                 android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/outlinedTextField0"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/editText_vertical_margin"
+            android:hint="@string/texto_apellidos">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etApellidos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/outlinedTextField00"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/editText_vertical_margin"
+            android:hint="@string/texto_num_cuenta">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etNum_cuenta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:inputType="number"
+                android:maxLines="9" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -65,7 +100,7 @@
             android:hint="@string/texto_fecha_nacimiento">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/fechaNacimiento"
+                android:id="@+id/etFechaNacimiento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clickable="true"
@@ -74,55 +109,22 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/outlinedTextField3"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/outlinedTextField000"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/editText_vertical_margin"
-            android:hint="@string/texto_telefono">
+            android:hint="@string/texto_carrera">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/telefono"
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/spCarreras"
+                android:layout_marginTop="@dimen/editText_vertical_margin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:clickable="true"
-                android:focusable="true"
-                android:inputType="phone" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/outlinedTextField4"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/editText_vertical_margin"
-            android:hint="@string/texto_email">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:clickable="true"
-                android:focusable="true"
-                android:inputType="textEmailAddress" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/outlinedTextField5"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/editText_vertical_margin"
-            android:hint="@string/texto_descripcion">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/descripcion"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:clickable="true"
-                android:focusable="true"
-                android:inputType="textMultiLine"
-                android:maxLines="4" />
+                android:background="@null"
+                android:inputType="none"
+                android:focusable="false"
+                android:editable="false" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textview.MaterialTextView
@@ -131,19 +133,20 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/editText_vertical_margin"
             android:gravity="center_horizontal"
-            android:text="@string/texto_nota"
+            android:text="@string/texto_limpiar"
             android:textSize="@dimen/size_texto_nota" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnSiguiente"
+            android:id="@+id/btnEnviar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_marginTop="@dimen/editText_vertical_margin"
-            android:text="@string/texto_btn"
+            android:text="@string/texto_enviar"
             android:theme="@style/MiBotonRaised"
             app:backgroundTint="@color/colorAccent"
-            app:cornerRadius="@dimen/radius_button" />
+            app:cornerRadius="@dimen/radius_button"
+            android:focusable="true" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 

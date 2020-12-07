@@ -4,11 +4,17 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
 
     <dimen name="editText_vertical_margin">8dp</dimen>
-    <dimen name="titulo_vertical_margin">16dp</dimen>
+
+    <dimen name="margin_vertical_text">18dp</dimen>
 
     <dimen name="radius_button">10dp</dimen>
 
     <dimen name="size_texto_titulos">24sp</dimen>
     <dimen name="size_texto_mostrar">18sp</dimen>
     <dimen name="size_texto_nota">14sp</dimen>
+
+    <dimen name="vertical_card_background">120dp</dimen>
+
+    <dimen name="size_image_user">150dp</dimen>
+    <dimen name="margin_top_user">60dp</dimen>
 </resources>

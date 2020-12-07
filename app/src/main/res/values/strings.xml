@@ -1,28 +1,48 @@
 <resources>
     <string name="app_name">Activities</string>
     <string name="texto_registro"><b>R E G I S T R O</b></string>
-    <string name="texto_btn">Siguiente</string>
+    <string name="texto_enviar">Enviar</string>
     <string name="texto_btn_back">Editar</string>
-    <string name="texto_nombre"><i>Nombre completo</i></string>
+    <string name="texto_nombre"><i>Nombre</i></string>
     <string name="texto_fecha_nacimiento"><i>Fecha nacimiento</i></string>
-    <string name="texto_telefono"><i>Télefono</i></string>
-    <string name="texto_email"><i>Email</i></string>
-    <string name="texto_descripcion"><i>Descripción contacto</i></string>
+    <string name="texto_num_cuenta"><i>No. De Cuenta</i></string>
 
-    <string name="texto_nota"><i><b>*Desliza hacia abajo para limpiar*</b></i></string>
 
-    <string name="texto_confirmar"><b>CONFIRMAR DATOS</b></string>
     <string name="confirmar_fecha_nacimiento"><b>Fecha nacimiento: </b></string>
-    <string name="confirmar_telefono"><b>Tel. </b></string>
-    <string name="confirmar_email"><b>Email: </b></string>
-    <string name="confirmar_descripcion"><b>Descripción: </b></string>
 
-    <string name="p_nombre">nombreCompleto</string>
-    <string name="p_fecha">fechaNacimiento</string>
-    <string name="p_telefono">telefono</string>
-    <string name="p_email">email</string>
-    <string name="p_descripcion">descripcion</string>
+    <string name="p_nombre">nombre</string>
+    <string name="p_fecha_nacimiento">fechaNacimiento</string>
+    <string name="p_apellidos">apellidos</string>
+    <string name="p_num_cuenta">numCuenta</string>
+    <string name="p_carrera">carrera</string>
 
-    <string name="texto_toast">Completa los campos para continuar</string>
+    <string name="texto_toast">Por favor, completa los campos para continuar</string>
 
+    <string-array name="carreras">
+        <item>Ingeniería Aeroespacial</item>
+        <item>Ingeniería Civil</item>
+        <item>Ingeniería Geomática</item>
+        <item>Ingeniería Ambienta</item>
+        <item>Ingeniería Geofísica</item>
+        <item>Ingeniería Geológica</item>
+        <item>Ingeniería Petrolera</item>
+        <item>Ingeniería de Minas y Metalurgia</item>
+        <item>Ingeniería en Computación</item>
+        <item>Ingeniería Eléctrica Electrónica</item>
+        <item>Ingeniería en Telecomunicaciones</item>
+        <item>Ingeniería Mecánica</item>
+        <item>Ingeniería Industrial</item>
+        <item>Ingeniería Mecatrónica</item>
+        <item>Ingeniería en Sistemas Biomédicos</item>
+    </string-array>
+
+    <string name="texto_apellidos"><i>Apellidos</i></string>
+    <string name="texto_carrera"><i>Carrera</i></string>
+    <string name="texto_limpiar"><i><b>*Desliza hacia abajo para limpiar*</b></i></string>
+    <string name="texto_confirmar"><b>CONFIRMAR DATOS</b></string>
+    <string name="error_nombre">Por favor, ingresa tu nombre</string>
+    <string name="error_apellidos">Por favor, ingresa tus apellidos</string>
+    <string name="error_num_cuenta">Por favor, ingresa tu numero de cuenta</string>
+    <string name="error_fecha">Por favor, ingresa tu fecha de nacimiento</string>
+    <string name="error_carreras">Por favor, ingresa tu carrera</string>
 </resources>

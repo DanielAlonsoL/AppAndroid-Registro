@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Activities</string>
+    <string name="texto_registro"><b>F O R M</b></string>
+    <string name="texto_enviar">Send</string>
+    <string name="texto_btn_back">Edit</string>
+    <string name="texto_nombre"><i>Name</i></string>
+    <string name="texto_apellidos"><i>Last Name</i></string>
+    <string name="texto_fecha_nacimiento"><i>Date of Birth</i></string>
+    <string name="texto_num_cuenta"><i>Account number</i></string>
+    <string name="texto_carrera"><i>Degree</i></string>
+    <string name="texto_limpiar"><i><b>*Swipe to clean*</b></i></string>
+    <string name="texto_confirmar"><b>CONFIRM</b></string>
+    <string name="texto_toast">Please, complete to continue</string>
+    <string name="confirmar_fecha_nacimiento"><b>Date of Birth: </b></string>
+    <string name="p_nombre">name</string>
+    <string name="p_fecha_nacimiento">dateOfBirth</string>
+    <string name="p_apellidos">lastName</string>
+    <string name="error_nombre">Please, type your name</string>
+    <string name="error_apellidos">Please, type your last name</string>
+    <string name="error_num_cuenta">Please, type your account number</string>
+    <string name="p_num_cuenta">numAccount</string>
+    <string name="p_carrera">degree</string>
+    <string name="error_fecha">Please, type your date of birth</string>
+    <string name="error_carreras">Please, type your degree</string>
+</resources>

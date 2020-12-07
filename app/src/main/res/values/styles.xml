@@ -17,4 +17,17 @@
         <item name="android:buttonStyle">@style/Personalizado</item>
     </style>
 
+    <style name="ShapeAppearanceOverlay.App.CornerSize50Percent" parent="">
+        <item name="cornerSize">50%</item>
+        <item name="cornerFamily">rounded</item>
+    </style>
+
+    <!-- Image rounded -->
+    <style name="circleImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+
+
 </resources>
